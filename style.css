@@ -1,0 +1,139 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+body *{
+  font-family: 'Inter', sans-serif;
+  line-height: 160%;
+}
+
+body{
+background:#121214 url(assets/Fundo.jpg) no-repeat top center;
+background-size: 100% auto;
+}
+header{
+  padding-top: 32px;
+}
+
+header div {
+  background-image: linear-gradient(180deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+  border-radius: 50%;
+  width: 120px;
+  margin: auto;
+  display: flex;
+  padding: 4px;
+  transition: transform .3s;
+  animation:  fromTop .7s .4s backwards;
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header div img{
+ width: 100%;
+ border-radius: 50%;
+}
+
+section h2{
+  font-size: 24px;
+  letter-spacing: -0.47px;
+  color: #FFFFFF;
+}
+section p {
+  font-size: 16px;
+  letter-spacing: -0.18px;
+  color: #A1A1AA;
+}
+section ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; 
+  list-style: none;
+  margin-top: 24px;
+}
+
+section ul li {
+  transition: transform .3s;
+}
+
+section ul li:hover {
+  transform: scale(1.1);
+}
+
+main{
+  display: grid;
+  gap: 24px;
+  max-width: 580px;
+  width: 90%;
+  margin: auto;
+  margin-top: 32px;
+}
+
+section{
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+  padding-top: 4px;
+  border-radius: 10px;
+}
+
+section div {
+  background-color: #2A2634;
+  padding: 24px 32px 32px;
+  gap: 24px;
+  border-radius: 8px;
+  
+}
+
+.games-list img{
+  border-radius: 8px;
+  width: 90px;
+}
+
+.chanels-list img{
+  border-radius: 50%;
+  border: 1px solid #443E54;
+  width: 70px;
+}
+
+/* Animation */
+
+main section {
+ animation: fromButtom .7s;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+main section:nth-child(2) {
+  animation-delay: .2s;
+}
+main section:nth-child(3) {
+  animation-delay: .4s;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromButtom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
